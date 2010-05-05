@@ -26,3 +26,5 @@ module IconLinks
     end
   end
 end
+
+ActionView::Base.send :include, IconLinks if defined?(ActionView::Base)
