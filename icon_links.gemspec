@@ -8,9 +8,10 @@ spec = Gem::Specification.new do |s|
   s.has_rdoc = true
   s.rubyforge_project = 'icon_links'
   s.extra_rdoc_files = Dir['[A-Z]*']
-  s.rdoc_options << '--title' <<  'Icon Links -- Easily link with icons in Rails views"
+  s.rdoc_options << '--title' <<  'Icon Links -- Easily link with icons in Rails views'
   s.author = "Nate Wiger"
   s.email = "nate@wiger.org"
-  s.homepage = "http://github.com/playerconnect/icon_links"
+  s.homepage = "http://github.com/nateware/icon_links"
+  s.requirements << 'activesupport v2.3.x'
+  s.add_dependency('activesupport', '~> 2.3')
 end
-

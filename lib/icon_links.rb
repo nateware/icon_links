@@ -1,4 +1,5 @@
 # IconLinks
+require 'active_support/core_ext/module/attribute_accessors'
 module IconLinks
   # Relative path to the icons
   mattr_accessor :icon_image_url
