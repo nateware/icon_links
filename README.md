@@ -1,5 +1,5 @@
-IconLinks
-=========
+Icon Links - Change boring Rails text links to sexy icon_to links
+=================================================================
 Easily link icons of your choosing, by using the handy Rails helpers included in this plugin.  Works great with Silk icons, but will work equally well for any other icon set you have as well.  This is basically a set of shortcuts around the standard Rails REST routes and url helpers.
 
 Example
