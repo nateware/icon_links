@@ -32,25 +32,25 @@ module IconLinks
           url = send("new_#{meth}_path", options)
           #options[:rel] = "gb_page_center[600, 500]"   # greybox
           options[:title] ||= "Create a new #{label}"
-          return link_icon(icon, url, options)
+          return icon_to(icon, url, options)
 
         when 'ajaxnew'
           url = send("new_#{meth}_path", options)
           #options[:rel] = "gb_page_center[600, 500]"   # greybox
           options[:title] ||= "Create a new #{label}"
-          return link_icon(icon, url, options)
+          return icon_to(icon, url, options)
 
         when 'edit'
           url = send("edit_#{meth}_path", args)
           #options[:rel] = "gb_page_center[600, 500]"   # greybox
           options[:title] ||= "Edit this #{label}"
-          return link_icon(icon, url, options)
+          return icon_to(icon, url, options)
 
         when 'delete'
           url = send("#{meth}_path", args)
           options[:method] ||= :delete
           options[:title] ||= "Delete this #{label}"
-          return link_icon(icon, url, options)
+          return icon_to(icon, url, options)
 
         when 'ajaxdelete'
           # Delete a record with an id, ala user_path(user)
@@ -142,7 +142,7 @@ module IconLinks
           # main index, this does NOT have an id
           url = send("#{meth}_path", args)
           options[:title] ||= "View this #{label}"
-          return link_icon(icon, url, options)
+          return icon_to(icon, url, options)
         else
           # This generic handler handles all other actions
           options[:title] ||= "#{type.titleize} this #{label}"
@@ -164,7 +164,7 @@ module IconLinks
             options[:url] = url
             return link_to_remote(icon_tag(icon), options, htmlopt)
           else
-            return link_icon(icon, url, options)
+            return icon_to(icon, url, options)
           end
         end
       end

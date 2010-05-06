@@ -5,7 +5,7 @@ module IconLinks
 
     # This creates a link using the specified type of icon. The args
     # accepted are the exact same as the args for +link_to+.
-    def link_icon(text, *args)
+    def icon_to(text, *args)
       if args.first.is_a?(Hash)
         return icon_tag(:clear) unless args[0].delete(:if)
       end
@@ -14,20 +14,20 @@ module IconLinks
 
     # This creates a link using the specified type of icon. The args
     # accepted are the exact same as the args for +link_to_remote+.
-    def link_icon_remote(text, *args)
+    def icon_to_remote(text, *args)
       if args.first.is_a?(Hash)
         return icon_tag(:clear) unless args[0].delete(:if)
       end
       link_to_remote(icon_for(text), *args)
     end
 
-    # This is similar to link_icon, only it is designed to call a JS function
+    # This is similar to icon_to, only it is designed to call a JS function
     def function_icon(text, function)
       link_to(icon_for(text), '#', :onclick => function)
     end
 
     # This expands the text and returns the icon path. It is used internally
-    # by +link_icon+ and +link_icon_remote+ to render the link text.
+    # by +icon_to+ and +icon_to_remote+ to render the link text.
     def icon_for(text, excess=nil)
       link = nil
       if text.is_a? Array
@@ -61,7 +61,7 @@ module IconLinks
       }.update(options)
     end
 
-    # This returns a help link similar to +link_icon+, only using the help
+    # This returns a help link similar to +icon_to+, only using the help
     # from the system_help table. If no help is found, then an empty
     # string is returned (allowing you to randomly call this on any
     # object, without having to check if help exists first).
