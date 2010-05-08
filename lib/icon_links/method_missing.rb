@@ -174,9 +174,10 @@ module IconLinks
 end
 
 # Override Rails CDATA JS wrapper because it kills AJAX requests (doh!)
-module ActionView::Helpers::JavaScriptHelper
-  def javascript_tag(content, html_options = {})
-    content_tag("script", content,
-                html_options.merge(:type => "text/javascript"))
-  end
-end
+#module ActionView::Helpers::JavaScriptHelper
+#  def javascript_tag(content, html_options = {})
+#    content_tag("script", content,
+#                html_options.merge(:type => "text/javascript"))
+#  end
+#end
+

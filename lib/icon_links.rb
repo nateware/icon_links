@@ -1,5 +1,6 @@
 # IconLinks
 require 'active_support/core_ext/module/attribute_accessors'
+
 module IconLinks
   # Relative path to the icons
   mattr_accessor :icon_image_url
@@ -27,5 +28,8 @@ module IconLinks
     end
   end
 end
+
+require 'icon_links/view_helpers'
+require 'icon_links/method_missing'
 
 ActionView::Base.send :include, IconLinks if defined?(ActionView::Base)
