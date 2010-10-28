@@ -13,5 +13,5 @@ spec = Gem::Specification.new do |s|
   s.email = "nate@wiger.org"
   s.homepage = "http://github.com/nateware/icon_links"
   s.requirements << 'activesupport v2.3.x'
-  s.add_dependency('activesupport', '=> 2.3')
+  s.add_dependency('activesupport', '>= 2.3')
 end
